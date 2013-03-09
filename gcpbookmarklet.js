@@ -12,6 +12,7 @@
         var gadget = new cloudprint.Gadget();
 	    gadget.setPrintButton(cloudprint.Gadget.createDefaultPrintButton("bookmarklet_print_button_container"));
 	    gadget.setPrintDocument("url", document.title, document.URL);
+	    window.setTimeout(function() { gadget.openPrintDialog(); }, 200);
     };
 
     window.setTimeout(addPrintButton, 200);
